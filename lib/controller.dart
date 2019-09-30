@@ -40,29 +40,38 @@ class _ControllerScreenState extends State<ControllerScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   Container(
-                    child: Text(
-                      "page light",
-                      style: Theme.of(context).textTheme.headline,
+                    child: Image.asset(
+                      'assets/pagelight_app_2-1.png',
+                      width: 85,
                     ),
                     alignment: Alignment.center,
                   ),
                   Container(
                       alignment: Alignment.centerLeft,
-                      child: GestureDetector(
-                          onTap: this.togglePower,
-                          child: IconButton(
-                            iconSize: 128,
-                            icon: Icon(
-                              Icons.settings_power,
-                              color:
-                                  this.isPowerOn ? Colors.purple : Colors.black,
+                      child: Container(
+                          margin: EdgeInsets.only(left: 46, top: 30),
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(100),
+                            onTap: this.togglePower,
+                            child: new Image.asset(
+                              'assets/pagelight_app_2-2.png',
+                              width: 100,
                             ),
-                            onPressed: this.togglePower,
                           ))),
                   Container(
+                    margin: const EdgeInsets.only(bottom: 51.0, right: 31),
+                    child: Image.asset(
+                      'assets/pagelight_app_2-4.png',
+                      width: 24,
+                    ),
+                    alignment: Alignment.bottomRight,
+                  ),
+                  Container(
                     child: RotationTransition(
-                      turns: AlwaysStoppedAnimation(-15 / 360),
+                      turns: AlwaysStoppedAnimation(-45 / 360),
                       child: Slider(
+                        activeColor: Colors.black,
+                        inactiveColor: Colors.black,
                         value: this.brightness,
                         min: 1.0,
                         max: 3.0,
@@ -75,6 +84,20 @@ class _ControllerScreenState extends State<ControllerScreen> {
                         },
                       ),
                     ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 55.0, left: 30),
+                    child: Image.asset(
+                      'assets/pagelight_app_2-3.png',
+                      width: 24,
+                    ),
+                    alignment: Alignment.bottomLeft,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(top: 50.0),
+                    child:
+                        Image.asset('assets/pagelight_app_1-2.png', width: 32),
+                    alignment: Alignment.bottomCenter,
                   )
                 ],
               ))),

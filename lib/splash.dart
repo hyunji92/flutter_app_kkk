@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app_kkk/controller.dart';
 import 'package:flutter_blue/flutter_blue.dart';
 
 import 'bluetooth_off.dart';
+import 'controller.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -90,7 +90,13 @@ class _DeviceAutoSelectScreenState extends State<DeviceAutoSelectScreen> {
           return Center(
               child: Stack(
             children: <Widget>[
-              CircularProgressIndicator(),
+              Container(
+                child: Image.asset(
+                  'assets/pagelight_app_1-1.png',
+                  width: 130,
+                ),
+                alignment: Alignment.center,
+              ),
               Container(
                   height: 0,
                   child: Column(
@@ -108,6 +114,14 @@ class _DeviceAutoSelectScreenState extends State<DeviceAutoSelectScreen> {
                             ),
                           )
                           .toList())),
+              Container(
+                margin: const EdgeInsets.only(bottom: 50.0),
+                child: Image.asset(
+                  'assets/pagelight_app_1-2.png',
+                  width: 32,
+                ),
+                alignment: Alignment.bottomCenter,
+              )
             ],
           ));
         },
