@@ -47,51 +47,59 @@ class _ControllerScreenState extends State<ControllerScreen> {
                     alignment: Alignment.center,
                   ),
                   Container(
-                      alignment: Alignment.centerLeft,
-                      child: Container(
-                          margin: EdgeInsets.only(left: 46, top: 30),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(100),
-                            onTap: this.togglePower,
-                            child: new Image.asset(
-                              'assets/pagelight_app_2-2.png',
-                              width: 100,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: <Widget>[
+                        Flexible(
+                          child: Container(
+                            child: InkWell(
+                              customBorder: CircleBorder(),
+                              onTap: () {
+                                brightness = 0;
+                                updateBrightness();
+                              },
+                              child: Image.asset(
+                                'assets/ic_light_0.png',
+                                width: 81,
+                                height: 81,
+                              ),
                             ),
-                          ))),
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 51.0, right: 31),
-                    child: Image.asset(
-                      'assets/pagelight_app_2-4.png',
-                      width: 24,
+                          ),
+                        ),
+                        Flexible(
+                          child: Container(
+                            child: InkWell(
+                              customBorder: CircleBorder(),
+                              onTap: () {
+                                brightness = 50;
+                                updateBrightness();
+                              },
+                              child: Image.asset(
+                                'assets/ic_light_50.png',
+                                width: 81,
+                                height: 81,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          child: Container(
+                            child: InkWell(
+                              customBorder: CircleBorder(),
+                              onTap: () {
+                                brightness = 100;
+                                updateBrightness();
+                              },
+                              child: Image.asset(
+                                'assets/ic_light_100.png',
+                                width: 81,
+                                height: 81,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
                     ),
-                    alignment: Alignment.bottomRight,
-                  ),
-                  Container(
-                    child: RotationTransition(
-                      turns: AlwaysStoppedAnimation(-45 / 360),
-                      child: Slider(
-                        activeColor: Colors.black,
-                        inactiveColor: Colors.black,
-                        value: this.brightness,
-                        min: 1.0,
-                        max: 3.0,
-                        divisions: 2,
-                        onChanged: (value) {
-                          setState(() {
-                            this.brightness = value;
-                          });
-                          this.updateBrightness();
-                        },
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(top: 55.0, left: 30),
-                    child: Image.asset(
-                      'assets/pagelight_app_2-3.png',
-                      width: 24,
-                    ),
-                    alignment: Alignment.bottomLeft,
                   ),
                   Container(
                     margin: const EdgeInsets.only(top: 50.0),
