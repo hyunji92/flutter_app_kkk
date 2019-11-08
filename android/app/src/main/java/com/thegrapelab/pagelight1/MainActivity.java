@@ -1,4 +1,4 @@
-package com.example.flutter_app_kkk;
+package com.thegrapelab.pagelight1;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
