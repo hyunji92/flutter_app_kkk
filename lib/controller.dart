@@ -14,7 +14,7 @@ class ControllerScreen extends StatefulWidget {
 
 class _ControllerScreenState extends State<ControllerScreen> {
   var isPowerOn = false;
-  var brightness = 1.0;
+  var brightness = 0;
 
   @override
   void initState() {
@@ -71,7 +71,7 @@ class _ControllerScreenState extends State<ControllerScreen> {
                             child: InkWell(
                               customBorder: CircleBorder(),
                               onTap: () {
-                                brightness = 50;
+                                brightness = 1;
                                 updateBrightness();
                               },
                               child: Image.asset(
@@ -87,7 +87,7 @@ class _ControllerScreenState extends State<ControllerScreen> {
                             child: InkWell(
                               customBorder: CircleBorder(),
                               onTap: () {
-                                brightness = 100;
+                                brightness = 3;
                                 updateBrightness();
                               },
                               child: Image.asset(
