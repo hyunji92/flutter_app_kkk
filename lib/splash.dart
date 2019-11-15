@@ -151,7 +151,8 @@ class _DeviceAutoSelectScreenState extends State<DeviceAutoSelectScreen> {
         await device.discoverServices();
 
         // Move Page Screen
-        await Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+        await Navigator.of(context)
+            .pushReplacement(MaterialPageRoute(builder: (context) {
           return ControllerScreen(device: device);
         }));
 
