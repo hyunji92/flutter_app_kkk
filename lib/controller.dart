@@ -71,7 +71,7 @@ class _ControllerScreenState extends State<ControllerScreen> {
                             child: InkWell(
                               customBorder: CircleBorder(),
                               onTap: () {
-                                brightness = 1;
+                                brightness = 2;
                                 updateBrightness();
                               },
                               child: Image.asset(
