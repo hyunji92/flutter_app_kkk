@@ -51,7 +51,9 @@ class _ControllerScreenState extends State<ControllerScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
                         Flexible(
+                          flex: 1,
                           child: Container(
+                            alignment: Alignment.center,
                             child: InkWell(
                               customBorder: CircleBorder(),
                               onTap: () {
@@ -60,14 +62,16 @@ class _ControllerScreenState extends State<ControllerScreen> {
                               },
                               child: Image.asset(
                                 'assets/ic_light_0.png',
-                                width: 81,
-                                height: 81,
+                                width: 81 * 0.3,
+                                height: 81 * 0.3,
                               ),
                             ),
                           ),
                         ),
                         Flexible(
+                          flex: 1,
                           child: Container(
+                            alignment: Alignment.center,
                             child: InkWell(
                               customBorder: CircleBorder(),
                               onTap: () {
@@ -76,14 +80,16 @@ class _ControllerScreenState extends State<ControllerScreen> {
                               },
                               child: Image.asset(
                                 'assets/ic_light_50.png',
-                                width: 81,
-                                height: 81,
+                                width: 81 * 0.75,
+                                height: 81 * 0.75,
                               ),
                             ),
                           ),
                         ),
                         Flexible(
+                          flex: 1,
                           child: Container(
+                            alignment: Alignment.center,
                             child: InkWell(
                               customBorder: CircleBorder(),
                               onTap: () {
@@ -92,8 +98,8 @@ class _ControllerScreenState extends State<ControllerScreen> {
                               },
                               child: Image.asset(
                                 'assets/ic_light_100.png',
-                                width: 81,
-                                height: 81,
+                                width: 81 * 0.75,
+                                height: 81 * 0.75,
                               ),
                             ),
                           ),
